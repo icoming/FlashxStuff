@@ -1,0 +1,11 @@
+https://datahub.io/dataset/twitter-social-graph-www2010
+
+http://an.kaist.ac.kr/traces/WWW2010.html
+
+download 2009 twitter data-set
+
+download 
+https://github.com/icoming/FlashX/wiki/Run-FlashX-in-the-Amazon-cloud
+
+do we want to request rights to an existing cluster / build one?
+
