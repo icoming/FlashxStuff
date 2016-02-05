@@ -9,3 +9,15 @@ https://github.com/icoming/FlashX/wiki/Run-FlashX-in-the-Amazon-cloud
 
 do we want to request rights to an existing cluster / build one?
 
+
+ubuntu 14:04 R fix:
+apt-get install r-base r-base-dev
+
+
+
+
+TODO:
+how to save changes to my own docker instance,
+how to write a docker file,
+how to ssh into a docker file
+
