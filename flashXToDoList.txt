@@ -18,9 +18,16 @@ flashX:
 libatlas-base-dev Install libatlas-base-dev
 
 
+-> move algorithm to flashX
+->get cluster running
+-> compare pageRank metrics
+-> make sure I know how big my docker vm's are
+
+
 TODO:
 how to save changes to my own docker instance,
 how to write a docker file,
 how to ssh into a docker file
+
 
 spark cluster docker image
