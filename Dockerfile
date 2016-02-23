@@ -23,19 +23,16 @@ RUN sudo apt-get install -y git cmake g++
 RUN sudo apt-get install -y libboost-dev libboost-system-dev libboost-filesystem-dev libnuma-dev libaio-dev libhwloc-dev libatlas-base-dev zlib1g-dev
 RUN sudo apt-get install -y libstxxl-dev zlib1g-dev
 
-RUN git clone https://github.com/icoming/FlashGraph.git
 RUN git clone https://github.com/icoming/FlashX.git
 
 RUN sudo apt-get install wget
 #wget is for trilinos
 
-RUN cd FlashX
+WORKDIR /FlashX
 RUN mkdir build
-RUN cd build
-RUN cd ../
-CMD cmake
-RUN cd build
-CMD make
+WORKDIR build
+RUN cmake ..
+RUN make -j32
 
 
 ####Install and compile R
@@ -48,6 +45,9 @@ RUN sudo apt-get -y install r-base
 
 #run R >> intstall igraph install.packages("igraph")
 RUN sudo su - -c "R -e \"install.packages('igraph', repos = 'http://cran.rstudio.com/')\""
+
+WORKDIR /FlashX
+RUN ./install_FlashR.sh
 
 #check to see if it's there ^^^?
 
